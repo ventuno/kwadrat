@@ -1,3 +1,20 @@
+# Copyright (C) 2015 kwadrat
+# License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
+
+#A simple project inspired by Zbigniew Rybczyński's short film Kwadrat (Square).
+#Watch the film: http://artmuseum.pl/pl/filmoteka/praca/rybczynski-zbigniew-kwadrat
+#Read a description: http://www.zbigvision.com/Kwadrat.html
+#ZBIG VISION website: http://www.zbigvision.com/
+#kwadrat lets you turn a set of images in a set of frames following the process used by Zbig Rybczyński when making the short film Kwadrat in 1972.
+#0) For every picture in the loop
+#1) Take a square picture of size l
+    #2) Build a grid of size l on top of the image
+        #3) For every (square) cell in the grid
+            #4) If the cell intersects part of the underlying image, draw a WHITE square
+            #5) If the cell does not intersect part of the underlying image, draw a BLACK square
+    #) Change l to l/2
+    #) Repeat from 2
+
 from PIL import Image
 from PIL import ImageFilter
 import sys
